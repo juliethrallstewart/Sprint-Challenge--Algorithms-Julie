@@ -99,24 +99,26 @@ class SortingRobot:
         #next step = implement cache due to max calls 
         cache = {}
        
+        # use the robots methods to simulate a bubble sorting solution
+
         for i in range(1,len(l)):
-            temp = l[i]
-            compare = l[i - 1]
+            self._item = l[i]
+            self._position = l[i - 1]
+ 
+
             stop = len(l)
-   
-            while stop > 0 and temp < compare:
-                l[i-1] = temp
-                l[i] = compare
+
+            while stop > 0 and self._item < self._position:
+                l[i-1] = self._item
+                l[i] = self._position
                 stop-=1
-               
+                # self.compare_item()
+                # self.swap_item()
+                stop-=1
+              
+                
                 return self.sort(l)
         return l
-
-        # realized I need to sort using the methods on the robot
-
-        #plan: 
-
-        # use the robots methods to simulate a bubble sorting solution
 
 
 if __name__ == "__main__":
