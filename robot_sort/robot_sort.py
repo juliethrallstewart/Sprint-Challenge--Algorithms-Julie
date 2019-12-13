@@ -105,16 +105,14 @@ class SortingRobot:
             self._item = l[i]
             self._position = l[i - 1]
  
+            while self._item < self._position:
+                print(f"{self._item}, {self._position} - these are the positions")
 
-            stop = len(l)
-
-            while stop > 0 and self._item < self._position:
                 l[i-1] = self._item
                 l[i] = self._position
-                stop-=1
                 # self.compare_item()
                 # self.swap_item()
-                stop-=1
+               
               
                 
                 return self.sort(l)
