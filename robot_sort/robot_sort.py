@@ -98,17 +98,25 @@ class SortingRobot:
         """
         #next step = implement cache due to max calls 
         cache = {}
-        for i in range(0, len(l) - 1):
-            cur_index = i
-            if l[cur_index] <= l[cur_index + 1]:
-                print(f"if {l[cur_index]} <= {l[cur_index + 1]} do nothing")
-    
-            elif l[cur_index] > l[cur_index + 1]:
-                print(f"else {l[cur_index]} > {l[cur_index + 1]} swap variables")
-                l[cur_index], l[cur_index + 1] = l[cur_index + 1], l[cur_index]
-
+       
+        for i in range(1,len(l)):
+            temp = l[i]
+            compare = l[i - 1]
+            stop = len(l)
+   
+            while stop > 0 and temp < compare:
+                l[i-1] = temp
+                l[i] = compare
+                stop-=1
+               
                 return self.sort(l)
         return l
+
+        # realized I need to sort using the methods on the robot
+
+        #plan: 
+
+        # use the robots methods to simulate a bubble sorting solution
 
 
 if __name__ == "__main__":
