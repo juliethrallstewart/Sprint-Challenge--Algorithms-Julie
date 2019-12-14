@@ -10,17 +10,18 @@ def count_th(word):
     count = 0
     if th in word:
         count+=1
-        new_word = word.replace(th,'',1)
+        new_word = word.replace(th,'-',1)
+        print(word, new_word)
         word = new_word
        
-        return 1 + count_th(word[0:])
+        return count + count_th(word[0:])
     return count
   
     
     
-print(count_th('therethere'),2)
-print(count_th('there'),1)
-print(count_th('abcThthde'),1)
-print(count_th('thththth'),4)
+# print(count_th('therethere'),2)
+# # print(count_th('there'),1)
+# # print(count_th('abcThthde'),1)
+print(count_th('thhtthht'),2)
 
 

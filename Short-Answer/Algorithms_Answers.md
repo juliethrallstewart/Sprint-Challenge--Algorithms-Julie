@@ -3,16 +3,15 @@
 ## Exercise I
 
 a)
-O(c^n) = exponential 
+O(n) .. see file
 
-In excercise a, depending on the initial size of n its rate of growth is 3 times itself
-depending on if a changes, this could run forever in a loop
+
 
 
 b)
-O(log n)
+O(n log n)
 
-The variable J grows by double each time until the condition is met and stop, this
+For as many times as 'n' the variable J grows by double each time until the condition is met and stops, this
 decreases the rate of time it takes to complete looping through the range each time
 the loop runs
 
